@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <RepoRoot Condition="'$(RepoRoot)' == ''">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)../../'))</RepoRoot>
+    <GameRoot Condition="'$(GameRoot)' == ''">$(BEAT_SABER_DIR)</GameRoot>
+    <BaseIntermediateOutputPath>$(RepoRoot)\.tmp\training-mods\build\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(RepoRoot)\.tmp\training-mods\build\$(MSBuildProjectName)\bin\</BaseOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);**\obj\**;**\bin\**</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

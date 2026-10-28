@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ProfileStore.Tests</AssemblyName>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableFrameworkPathOverride>true</EnableFrameworkPathOverride>
+    <FrameworkPathOverride>$(GameRoot)\Beat Saber_Data\Managed</FrameworkPathOverride>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Shared\ProfileStore.cs" />
+    <Compile Include="ProfileStoreTests.cs" />
+    <Reference Include="DataModels" HintPath="$(GameRoot)\Beat Saber_Data\Managed\DataModels.dll" Private="false" />
+    <Reference Include="BeatmapCore" HintPath="$(GameRoot)\Beat Saber_Data\Managed\BeatmapCore.dll" Private="false" />
+    <Reference Include="Newtonsoft.Json" HintPath="$(GameRoot)\Libs\Newtonsoft.Json.dll" />
+  </ItemGroup>
+</Project>
