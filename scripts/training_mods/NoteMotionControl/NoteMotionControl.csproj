@@ -1,0 +1,104 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <EnableFrameworkPathOverride>true</EnableFrameworkPathOverride>
+    <FrameworkPathOverride>$(GameRoot)/Beat Saber_Data/Managed</FrameworkPathOverride>
+    <AssemblyName>NoteMotionControl</AssemblyName>
+    <RootNamespace>NoteMotionControl</RootNamespace>
+    <Version>0.4.0</Version>
+    <InformationalVersion>0.4.0+bs1.45.2</InformationalVersion>
+    <OutputPath>$(RepoRoot)/.tmp/training-mods/note-motion/build/bin/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <NoWarn>$(NoWarn);CS0649;CS0414;CS0618</NoWarn>
+    <LocalModUIPath Condition="'$(LocalModUIPath)' == ''">$(RepoRoot)/.tmp/local-mod-ui/build/LocalModUI.dll</LocalModUIPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="LocalModUI" HintPath="$(LocalModUIPath)" Private="false" />
+    <Compile Remove="**/Tests/**/*.cs" />
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/Main.dll">
+      <Private>false</Private>
+      <Publicize>true</Publicize>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/DataModels.dll">
+      <Private>false</Private>
+      <Publicize>true</Publicize>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/GameplayCore.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/BGLib.AppFlow.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/BeatSaber.ViewSystem.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/BeatmapCore.dll">
+      <Private>false</Private>
+      <Publicize>true</Publicize>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/AdditionalContentModel.Interfaces.dll" Private="false" />
+    <Reference Include="$(GameRoot)/Plugins/CustomJSONData.dll" Private="false" />
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/Core.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/Tweening.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/IPA.Loader.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/netstandard.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/Zenject.dll">
+      <Private>false</Private>
+      <Publicize>true</Publicize>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/Zenject-usage.dll">
+      <Private>false</Private>
+      <Publicize>true</Publicize>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/UnityEngine.CoreModule.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/UnityEngine.UI.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/BGLib.Polyglot.dll" Private="false" />
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/UnityEngine.UIModule.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/HMUI.dll">
+      <Private>false</Private>
+      <Publicize>true</Publicize>
+    </Reference>
+    <Reference Include="$(GameRoot)/Libs/0Harmony.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Libs/Newtonsoft.Json.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Plugins/BSML.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="$(GameRoot)/Plugins/SiraUtil.dll">
+      <Private>false</Private>
+    </Reference>
+    <EmbeddedResource Include="NoteMotionControl.Settings.bsml">
+      <LogicalName>NoteMotionControl.Settings.bsml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manifest.json">
+      <LogicalName>NoteMotionControl.manifest.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>NoteMotionControl.Tests</AssemblyName>
+    <EnableFrameworkPathOverride>true</EnableFrameworkPathOverride>
+    <FrameworkPathOverride>$(GameRoot)/Beat Saber_Data/Managed</FrameworkPathOverride>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SpeedPolicy.cs" Link="SpeedPolicy.cs" />
+    <Compile Include="..\Options.cs" Link="Options.cs" />
+    <Compile Include="..\OptionsMigration.cs" Link="OptionsMigration.cs" />
+    <Compile Include="..\SettingsStore.cs" Link="SettingsStore.cs" />
+    <Compile Include="..\Presets.cs" Link="Presets.cs" />
+    <Compile Include="SpeedPolicyTests.cs" />
+    <Compile Include="OptionsMigrationTests.cs" />
+    <Compile Include="PresetsTests.cs" />
+    <Compile Include="Program.cs" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(GameRoot)/Libs/Newtonsoft.Json.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

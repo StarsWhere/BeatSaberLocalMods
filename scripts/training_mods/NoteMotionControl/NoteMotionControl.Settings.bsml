@@ -1,0 +1,39 @@
+<bg>
+  <tab-selector tab-tag="training-tabs" size-delta="0 8" anchored-position="0 -10" />
+  <tab tags="training-tabs" tab-name="Common" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container tags="training-settings-root" size-delta-x="-20" anchored-position-x="4">
+      <dropdown-list-setting text="Preset" value="preset" options="presets" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Enabled" value="enabled" bind-value="true" apply-on-change="true" />
+      <dropdown-list-setting text="Application policy" value="application-policy" options="application-policies" bind-value="true" apply-on-change="true" />
+      <dropdown-list-setting text="NJS mode" value="njs-mode" options="njs-modes" bind-value="true" apply-on-change="true" />
+      <slider-setting text="Override NJS" value="override-njs" active="~show-override-njs" min="0.1" max="100" increment="0.1" formatter="FormatNjs" bind-value="true" apply-on-change="true" />
+      <slider-setting text="Speed multiplier" value="speed-multiplier" active="~show-speed-multiplier" min="0.1" max="5" increment="0.05" formatter="FormatMultiplier" bind-value="true" apply-on-change="true" />
+      <text text="~latest-summary" active="~has-latest-summary" font-size="3.2" rich-text="false" align="Left" size-delta-y="18" />
+      <text text="~status" active="~has-status" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+  <tab tags="training-tabs" tab-name="Density and reaction" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container size-delta-x="-20" anchored-position-x="4">
+      <dropdown-list-setting text="Reduction mode" value="reduction-mode" options="reduction-modes" bind-value="true" apply-on-change="true" />
+      <vertical active="~show-reduction" spacing="0" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" child-control-height="true" child-expand-height="false">
+        <slider-setting text="Density window" value="window-seconds" active="~show-density" min="0.05" max="3" increment="0.05" formatter="FormatSeconds" bind-value="true" apply-on-change="true" />
+        <slider-setting text="Maximum density" value="max-nps" active="~show-density" min="0.5" max="12" increment="0.5" formatter="FormatNps" bind-value="true" apply-on-change="true" />
+        <slider-setting text="Same-hand interval" value="same-hand-interval" active="~show-density" min="0" max="1000" increment="25" formatter="FormatMilliseconds" bind-value="true" apply-on-change="true" />
+        <slider-setting text="Retain percentage" value="retain-percent" active="~show-percentage" min="5" max="100" increment="5" formatter="FormatPercent" bind-value="true" apply-on-change="true" />
+      </vertical>
+      <dropdown-list-setting text="Reaction time mode" value="reaction-time-mode" options="reaction-modes" bind-value="true" apply-on-change="true" />
+      <slider-setting text="Target reaction time" value="reaction-time-ms" active="~show-specified-reaction" min="200" max="1500" increment="50" formatter="FormatMilliseconds" bind-value="true" apply-on-change="true" />
+      <text text="~status" active="~has-status" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+  <tab tags="training-tabs" tab-name="Motion effects" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container size-delta-x="-20" anchored-position-x="4">
+      <bool-setting text="Hide pre-jump" value="hide-pre-jump" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Vertical jump" value="vertical-jump" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Horizontal swap" value="horizontal-swap" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Spawn rotation" value="spawn-rotation" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Rotate towards player" value="rotate-towards-player" bind-value="true" apply-on-change="true" />
+      <text text="~status" active="~has-status" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+</bg>

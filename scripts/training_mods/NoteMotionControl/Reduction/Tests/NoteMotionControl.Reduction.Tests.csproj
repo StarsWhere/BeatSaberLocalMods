@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <OutputPath>$(RepoRoot)\.tmp\training-mods\note-motion\reduction-tests\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Options.cs" Link="Options.cs" />
+    <Compile Include="..\ArcMetadata.cs" />
+    <Compile Include="..\BeatmapReducer.cs" />
+    <Compile Include="..\BeatmapTiming.cs" />
+    <Compile Include="..\DensityStatistics.cs" />
+    <Compile Include="..\NativeStructurePolicy.cs" />
+    <Compile Include="..\ReductionAlgorithm.cs" />
+    <Compile Include="..\ReductionRuntime.cs" />
+    <Compile Include="..\TransformSession.cs" />
+    <Compile Include="AlgorithmTests.cs" />
+    <Compile Include="TestDoubles.cs" />
+    <Compile Include="TestRunner.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BeatmapCore" HintPath="$(GameRoot)\Beat Saber_Data\Managed\BeatmapCore.dll" />
+    <Reference Include="DataModels" HintPath="$(GameRoot)\Beat Saber_Data\Managed\DataModels.dll" />
+    <Reference Include="AdditionalContentModel.Interfaces" HintPath="$(GameRoot)\Beat Saber_Data\Managed\AdditionalContentModel.Interfaces.dll" />
+    <Reference Include="GameplayCore" HintPath="$(GameRoot)\Beat Saber_Data\Managed\GameplayCore.dll" />
+    <Reference Include="Main" HintPath="$(GameRoot)\Beat Saber_Data\Managed\Main.dll" />
+    <Reference Include="CustomJSONData" HintPath="$(GameRoot)\Plugins\CustomJSONData.dll" />
+    <Reference Include="Newtonsoft.Json" HintPath="$(GameRoot)\Libs\Newtonsoft.Json.dll" />
+  </ItemGroup>
+</Project>
