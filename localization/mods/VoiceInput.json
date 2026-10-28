@@ -1,0 +1,11 @@
+{
+  "Voice Input": "语音输入",
+  "Microphone": "麦克风",
+  "System default": "系统默认",
+  "Maximum recording time": "最长录音时间",
+  "Recognition timeout": "识别超时",
+  "Test microphone": "测试麦克风",
+  "Stop test": "停止测试",
+  "Save": "保存",
+  "Reload configuration": "重新加载配置"
+}
