@@ -1,0 +1,21 @@
+<bg id="language-settings-content">
+  <tab-selector tab-tag="language-tabs" size-delta="0 8" anchored-position="0 -10" />
+  <tab tags="language-tabs" tab-name="General" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container tags="language-settings-root" size-delta-x="-20" anchored-position-x="4">
+      <bool-setting text="Chinese Mod UI" value="Enabled" bind-value="true" apply-on-change="true" />
+      <vertical active="~Enabled" spacing="0" horizontal-fit="Unconstrained" vertical-fit="PreferredSize">
+        <dropdown-list-setting text="Mod" value="SelectedScope" options="ScopeChoices" formatter="FormatScope" bind-value="true" apply-on-change="true" />
+        <bool-setting text="Translate selected mod" value="ScopeEnabled" bind-value="true" apply-on-change="true" />
+      </vertical>
+      <text text="~Status" active="~HasStatus" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+  <tab tags="language-tabs" tab-name="Advanced" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container size-delta-x="-20" anchored-position-x="4">
+      <text text="Custom translations" font-size="3.2" bold="true" color="#8BD9EB" align="Left" size-delta-y="8" />
+      <text text="~CustomFile" font-size="3.2" rich-text="false" align="Left" size-delta-y="8" />
+      <button text="Reload translations" pref-height="8" on-click="ReloadCustom" />
+      <text text="~Status" active="~HasStatus" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+</bg>

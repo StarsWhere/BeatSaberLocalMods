@@ -1,0 +1,22 @@
+{
+  "id": "ModUiChinese",
+  "name": "Mod UI Language",
+  "author": "StarsWhere",
+  "version": "1.1.7",
+  "loadAfter": [
+    "PlaylistManager",
+    "MorePlaylists"
+  ],
+  "gameVersion": "1.45.2",
+  "description": "Configurable Simplified Chinese translations for mod menus, settings and counters.",
+  "dependsOn": {
+    "BSIPA": "^4.3.7",
+    "BeatSaberMarkupLanguage": "^1.14.1",
+    "SiraUtil": "^3.3.1",
+    "LocalModUI": "^0.1.0"
+  },
+  "links": {
+    "project-source": "https://github.com/StarsWhere/BeatSaberLocalMods",
+    "project-home": "https://github.com/StarsWhere/BeatSaberLocalMods#readme"
+  }
+}
