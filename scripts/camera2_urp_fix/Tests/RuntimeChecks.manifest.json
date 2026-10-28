@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "Camera2RegressionRuntime",
+  "name": "Camera2 URP Fix Runtime Checks",
+  "author": "Local",
+  "version": "0.1.0",
+  "gameVersion": "1.45.2",
+  "description": "Bounded runtime checks for the local Camera2 URP adapter.",
+  "dependsOn": {
+    "BSIPA": "^4.3.7",
+    "Camera2": "^0.6.119",
+    "Camera2UrpFix": "^0.3.1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Camera2UrpFix",
+  "name": "Camera2 URP Fix",
+  "author": "StarsWhere",
+  "version": "0.3.1",
+  "gameVersion": "1.45.2",
+  "description": "适配 Camera2 的 URP/XR、墙体、桌面视口与配置交互。",
+  "dependsOn": {
+    "BSIPA": "^4.3.7",
+    "Camera2": "^0.6.119",
+    "BeatSaberMarkupLanguage": "^1.12.2"
+  },
+  "links": {
+    "project-source": "https://github.com/StarsWhere/BeatSaberLocalMods",
+    "project-home": "https://github.com/StarsWhere/BeatSaberLocalMods#readme"
+  }
+}
