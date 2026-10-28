@@ -1,0 +1,28 @@
+<bg>
+  <horizontal preferred-width="154" preferred-height="74" spacing="5" pad="3" child-control-width="true" child-expand-width="false" child-control-height="true" child-expand-height="false" child-align="UpperLeft">
+    <vertical preferred-width="42" spacing="3" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" child-control-height="true" child-expand-height="false" child-control-width="true" child-expand-width="true">
+      <primary-button text="Training and activity" active="~TrainingSelected" on-click="training" pref-height="10" font-size="3.2" />
+      <button text="Training and activity" active="~TrainingUnselected" on-click="training" id="training-category" pref-height="10" font-size="3.2" />
+      <primary-button text="Song library" active="~LibrarySelected" on-click="library" pref-height="10" font-size="3.2" />
+      <button text="Song library" active="~LibraryUnselected" on-click="library" id="library-category" pref-height="10" font-size="3.2" />
+      <primary-button text="Devices and interface" active="~DevicesSelected" on-click="devices" pref-height="10" font-size="3.2" />
+      <button text="Devices and interface" active="~DevicesUnselected" on-click="devices" id="devices-category" pref-height="10" font-size="3.2" />
+    </vertical>
+    <vertical preferred-width="101" spacing="3" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" child-control-height="true" child-expand-height="false" child-control-width="true" child-expand-width="true">
+      <vertical active="~HasRow0" spacing="1" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" child-control-height="true" child-expand-height="false" child-control-width="true" child-expand-width="true">
+        <button text="~Row0" on-click="open-0" interactable="~CanRow0" pref-height="10" font-size="3.5" />
+        <button text="~Secondary0" active="~HasSecondary0" on-click="secondary-0" interactable="~CanRow0" pref-height="8" font-size="3.2" />
+      </vertical>
+      <vertical active="~HasRow1" spacing="1" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" child-control-height="true" child-expand-height="false" child-control-width="true" child-expand-width="true">
+        <button text="~Row1" on-click="open-1" interactable="~CanRow1" pref-height="10" font-size="3.5" />
+        <button text="~Secondary1" active="~HasSecondary1" on-click="secondary-1" interactable="~CanRow1" pref-height="8" font-size="3.2" />
+      </vertical>
+      <vertical active="~HasRow2" spacing="1" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" child-control-height="true" child-expand-height="false" child-control-width="true" child-expand-width="true">
+        <button text="~Row2" on-click="open-2" interactable="~CanRow2" pref-height="10" font-size="3.5" />
+        <button text="~Secondary2" active="~HasSecondary2" on-click="secondary-2" interactable="~CanRow2" pref-height="8" font-size="3.2" />
+      </vertical>
+      <text text="No available tools" active="~Empty" font-size="3.2" />
+      <text text="~Error" active="~HasError" rich-text="false" word-wrapping="true" font-size="3.2" color="#FF9999" preferred-height="15" />
+    </vertical>
+  </horizontal>
+</bg>
