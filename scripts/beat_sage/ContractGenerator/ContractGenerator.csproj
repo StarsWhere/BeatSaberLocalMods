@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>BeatSage.ContractGenerator</AssemblyName>
+    <RootNamespace>BeatSage.ContractGenerator</RootNamespace>
+    <Deterministic>true</Deterministic>
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
+    <OutputPath Condition="'$(OutputPath)' == ''">$(RepoRoot)/.tmp/beatsage-mod/build/generator/bin/</OutputPath>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)' == ''">$(RepoRoot)/.tmp/beatsage-mod/build/generator/obj/</BaseIntermediateOutputPath>
+    <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">$(BaseIntermediateOutputPath)$(Configuration)/</IntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../../shared_http_contracts/JsonContractRegistry.cs" Link="Shared/JsonContractRegistry.cs" />
+    <Compile Include="../../shared_http_contracts/ContractBuild.cs" Link="Shared/ContractBuild.cs" />
+    <PackageReference Include="NJsonSchema" Version="11.6.1" />
+    <PackageReference Include="NJsonSchema.CodeGeneration.CSharp" Version="11.6.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+</Project>
