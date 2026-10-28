@@ -1,0 +1,20 @@
+{
+  "id": "AdvancedSongFilters",
+  "name": "Advanced Song Filters",
+  "author": "StarsWhere",
+  "version": "0.3.0",
+  "gameVersion": "1.45.2",
+  "description": "Filter songs by ranges, mode, difficulty and pack, with personal presets and metric sorting.",
+  "dependsOn": {
+    "BSIPA": "^4.3.7",
+    "BetterSongList": "^0.4.3",
+    "SongCore": "^3.16.0",
+    "BeatSaberMarkupLanguage": "^1.14.1",
+    "SiraUtil": "^3.3.1",
+    "LocalModUI": "^0.1.0"
+  },
+  "links": {
+    "project-source": "https://github.com/StarsWhere/BeatSaberLocalMods",
+    "project-home": "https://github.com/StarsWhere/BeatSaberLocalMods#readme"
+  }
+}

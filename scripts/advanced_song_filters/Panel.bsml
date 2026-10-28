@@ -1,0 +1,141 @@
+<vertical id="uiRoot" horizontal-fit="Unconstrained" vertical-fit="Unconstrained">
+<modal id="filterModal" click-off-closes="false" move-to-center="true" size-delta-x="150" size-delta-y="76">
+  <vertical id="panelRoot" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="0">
+    <vertical id="mainPage" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="1">
+      <horizontal id="header" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1" bg="round-rect-panel" bg-color="#00000055" pad="0">
+        <text id="title" text="Advanced Filters" font-size="5" align="Center" pref-width="24" />
+        <text id="headerSpacer" text="" />
+        <button id="presetSelectorButton" text="Current" on-click="OpenPresetSelector" pref-width="30" />
+        <button text="Save As" on-click="OpenSavePreset" pref-width="19" />
+        <button text="Manage" on-click="OpenManagePresets" pref-width="14" />
+      </horizontal>
+      <text id="statusText" text="" active="false" font-size="3" color="#ff6b6b" align="Center" pref-height="5" />
+      <vertical id="selectionSection" spacing="1" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" bg="round-rect-panel" bg-color="#00000055" pad="1">
+        <horizontal id="modeRow" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1">
+          <text text="Mode" pref-width="10" align="Center" />
+          <icon-segments id="modeSelector" select-cell="ModeSelected" pref-width="104" />
+          <button id="allModesButton" text="All" on-click="SelectAllModes" pref-width="12" />
+        </horizontal>
+        <horizontal id="difficultySection" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1">
+          <text text="Difficulty" pref-width="10" align="Center" />
+          <button id="difficultyAll" text="All" on-click="DifficultyAll" pref-width="14" />
+          <button id="difficulty0" text="Easy" on-click="Difficulty0" pref-width="20" />
+          <button id="difficulty1" text="Normal" on-click="Difficulty1" pref-width="20" />
+          <button id="difficulty2" text="Hard" on-click="Difficulty2" pref-width="20" />
+          <button id="difficulty3" text="Expert" on-click="Difficulty3" pref-width="20" />
+          <button id="difficulty4" text="Expert+" on-click="Difficulty4" pref-width="20" />
+        </horizontal>
+      </vertical>
+      <horizontal id="scopeRow" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1">
+        <text-segments id="scopeSelector" contents="ScopeLabels" select-cell="ScopeSelected" pref-width="48" />
+      </horizontal>
+      <scrollable-container id="scrollContainer" mask-overflow="true" pref-height="29" horizontal-fit="Unconstrained" vertical-fit="Unconstrained">
+        <vertical id="formContent" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" spacing="0">
+          <vertical id="commonPage" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" spacing="0">
+            <horizontal id="metricHeader" pref-height="4" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1">
+              <text text="Metric" pref-width="20" align="Center" />
+              <text text="Minimum" pref-width="58" align="Center" />
+              <text text="Maximum" pref-width="58" align="Center" />
+            </horizontal>
+            <horizontal id="npsRow" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1" bg="round-rect-panel" bg-color="#00000033" pad="0">
+              <text text="Average NPS" pref-width="20" align="Center" />
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="npsMinDec" text="−" pref-width="8" pref-height="8" /><button id="npsMinValue" text="Any" pref-width="40" pref-height="8" /><button id="npsMinInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="npsMaxDec" text="−" pref-width="8" pref-height="8" /><button id="npsMaxValue" text="Any" pref-width="40" pref-height="8" /><button id="npsMaxInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+            </horizontal>
+            <horizontal id="njsRow" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1" bg="round-rect-panel" bg-color="#00000033" pad="0">
+              <text text="NJS" pref-width="20" align="Center" />
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="njsMinDec" text="−" pref-width="8" pref-height="8" /><button id="njsMinValue" text="Any" pref-width="40" pref-height="8" /><button id="njsMinInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="njsMaxDec" text="−" pref-width="8" pref-height="8" /><button id="njsMaxValue" text="Any" pref-width="40" pref-height="8" /><button id="njsMaxInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+            </horizontal>
+            <horizontal id="durationRow" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1" bg="round-rect-panel" bg-color="#00000033" pad="0">
+              <text text="Duration" pref-width="20" align="Center" />
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="durationMinDec" text="−" pref-width="8" pref-height="8" /><button id="durationMinValue" text="Any" pref-width="40" pref-height="8" /><button id="durationMinInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="durationMaxDec" text="−" pref-width="8" pref-height="8" /><button id="durationMaxValue" text="Any" pref-width="40" pref-height="8" /><button id="durationMaxInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+            </horizontal>
+          </vertical>
+          <vertical id="morePage" active="false" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" spacing="0">
+            <toggle-setting id="excludeOfficial" text="Exclude Official Packs" value="ExcludeOfficial" apply-on-change="true" pref-height="8" pref-width="140" />
+            <horizontal id="moreMetricHeader" pref-height="4" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1">
+              <text text="Metric" pref-width="20" align="Center" />
+              <text text="Minimum" pref-width="58" align="Center" />
+              <text text="Maximum" pref-width="58" align="Center" />
+            </horizontal>
+            <horizontal id="bpmRow" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1" bg="round-rect-panel" bg-color="#00000033" pad="0">
+              <text text="BPM" pref-width="20" align="Center" />
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="bpmMinDec" text="−" pref-width="8" pref-height="8" /><button id="bpmMinValue" text="Any" pref-width="40" pref-height="8" /><button id="bpmMinInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="bpmMaxDec" text="−" pref-width="8" pref-height="8" /><button id="bpmMaxValue" text="Any" pref-width="40" pref-height="8" /><button id="bpmMaxInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+            </horizontal>
+            <horizontal id="notesRow" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1" bg="round-rect-panel" bg-color="#00000033" pad="0">
+              <text text="Notes" pref-width="20" align="Center" />
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="notesMinDec" text="−" pref-width="8" pref-height="8" /><button id="notesMinValue" text="Any" pref-width="40" pref-height="8" /><button id="notesMinInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+              <horizontal pref-width="58" child-expand-width="false" spacing="1"><button id="notesMaxDec" text="−" pref-width="8" pref-height="8" /><button id="notesMaxValue" text="Any" pref-width="40" pref-height="8" /><button id="notesMaxInc" text="+" pref-width="8" pref-height="8" /></horizontal>
+            </horizontal>
+          </vertical>
+        </vertical>
+      </scrollable-container>
+      <horizontal id="footer" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1" bg="round-rect-panel" bg-color="#00000055" pad="0">
+        <text id="matchCount" text="" pref-width="50" align="Center" />
+        <text id="footerSpacer" text="" pref-width="17" />
+        <button id="retryButton" text="Retry" on-click="RetryStatus" active="false" pref-width="14" />
+        <button id="resetButton" text="Reset" on-click="ResetDraft" pref-width="12" />
+        <button id="cancelButton" text="Cancel" on-click="CancelDraft" pref-width="12" />
+        <primary-button id="applyButton" text="Apply" on-click="ApplyDraft" pref-width="20" />
+      </horizontal>
+    </vertical>
+
+    <vertical id="rangePage" active="false" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="0" pad="1" bg="round-rect-panel" bg-color="#00000055">
+      <horizontal pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1"><text id="rangeTitle" text="Value" font-size="5" align="Center" pref-width="140" /></horizontal>
+      <horizontal id="rangeBounds" pref-height="14" horizontal-fit="Unconstrained" child-expand-width="false" spacing="2">
+        <vertical pref-width="69" spacing="0"><text text="Minimum" align="Center" pref-height="3" /><button id="rangeMinimum" text="Any" on-click="RangeMinimum" pref-height="8" pref-width="67" /><text id="rangeMinimumError" text="" active="false" color="#ff6b6b" align="Center" pref-height="3" /></vertical>
+        <vertical pref-width="69" spacing="0"><text text="Maximum" align="Center" pref-height="3" /><button id="rangeMaximum" text="Any" on-click="RangeMaximum" pref-height="8" pref-width="67" /><text id="rangeMaximumError" text="" active="false" color="#ff6b6b" align="Center" pref-height="3" /></vertical>
+      </horizontal>
+      <text id="rangeError" text="" active="false" color="#ff6b6b" align="Center" pref-height="4" />
+      <vertical id="numericKeypad" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" spacing="0">
+        <horizontal id="keypadCommands" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1"><button text="Any" on-click="KeyUnlimited" pref-width="42" pref-height="8" /><button id="keypadDecimal" text="." on-click="KeyDecimal" pref-width="42" pref-height="8" /><button text="Backspace" on-click="KeyBackspace" pref-width="42" pref-height="8" /></horizontal>
+        <horizontal pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1"><button text="1" on-click="Key1" pref-width="42" pref-height="8" /><button text="2" on-click="Key2" pref-width="42" pref-height="8" /><button text="3" on-click="Key3" pref-width="42" pref-height="8" /></horizontal>
+        <horizontal pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1"><button text="4" on-click="Key4" pref-width="42" pref-height="8" /><button text="5" on-click="Key5" pref-width="42" pref-height="8" /><button text="6" on-click="Key6" pref-width="42" pref-height="8" /></horizontal>
+        <horizontal pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1"><button text="7" on-click="Key7" pref-width="42" pref-height="8" /><button text="8" on-click="Key8" pref-width="42" pref-height="8" /><button text="9" on-click="Key9" pref-width="42" pref-height="8" /></horizontal>
+        <horizontal pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1"><text text="" pref-width="42" /><button text="0" on-click="Key0" pref-width="42" pref-height="8" /><text text="" pref-width="42" /></horizontal>
+      </vertical>
+      <horizontal id="rangeActions" pref-height="8" horizontal-fit="Unconstrained" child-expand-width="false" spacing="1"><button text="Back" on-click="CancelRange" pref-width="60" pref-height="8" /><primary-button text="Confirm" on-click="ConfirmRange" pref-width="75" pref-height="8" /></horizontal>
+    </vertical>
+
+    <vertical id="presetSelectorPage" active="false" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="1" pad="1" bg="round-rect-panel" bg-color="#00000055">
+      <horizontal pref-height="8" child-expand-width="false" spacing="1"><button text="Back" on-click="ClosePresetSelector" pref-width="18" /><text text="Select Preset" font-size="5" align="Center" pref-width="125" /></horizontal>
+      <text id="presetSelectorStatus" text="" active="false" color="#ff6b6b" align="Center" pref-height="5" />
+      <scrollable-container id="presetSelectorScroll" mask-overflow="true" pref-height="60" horizontal-fit="Unconstrained"><vertical id="presetSelectorOptions" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" spacing="1" /></scrollable-container>
+    </vertical>
+
+    <vertical id="presetManagePage" active="false" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="1" pad="1" bg="round-rect-panel" bg-color="#00000055">
+      <horizontal pref-height="8" child-expand-width="false" spacing="1"><button text="Back" on-click="CloseManagePresets" pref-width="18" /><text text="Manage Presets" font-size="5" align="Center" pref-width="125" /></horizontal>
+      <text id="presetManageStatus" text="" active="false" color="#ff6b6b" align="Center" pref-height="5" />
+      <scrollable-container id="presetManageScroll" mask-overflow="true" pref-height="60" horizontal-fit="Unconstrained"><vertical id="presetOptions" horizontal-fit="Unconstrained" vertical-fit="PreferredSize" spacing="1" /></scrollable-container>
+    </vertical>
+
+    <vertical id="presetSavePage" active="false" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="2" pad="2" bg="round-rect-panel" bg-color="#00000055">
+      <horizontal pref-height="8" child-expand-width="false" spacing="1"><button text="Back" on-click="CloseManagePresets" pref-width="18" /><text id="presetSaveTitle" text="Save Preset" font-size="5" align="Center" pref-width="125" /></horizontal>
+      <text id="presetSaveStatus" text="" active="false" color="#ff6b6b" align="Center" pref-height="5" />
+      <text text="Preset Name" align="Center" pref-height="5" />
+      <button id="presetSaveName" name="PresetName" text="Preset 1" on-click="EditPresetName" pref-height="10" pref-width="140" />
+      <horizontal pref-height="10" child-expand-width="false" spacing="2"><button id="saveNewButton" text="Save As New Preset" on-click="SaveAsNewPreset" pref-width="68" pref-height="10" /><button id="updateCurrentButton" text="Update Current Preset" on-click="UpdateCurrentPreset" pref-width="68" pref-height="10" /></horizontal>
+    </vertical>
+
+    <vertical id="presetRenamePage" active="false" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="2" pad="2" bg="round-rect-panel" bg-color="#00000055">
+      <horizontal pref-height="8" child-expand-width="false" spacing="1"><button text="Back" on-click="CancelPresetName" pref-width="18" /><text id="presetRenameTitle" text="Rename Preset" font-size="5" align="Center" pref-width="125" /></horizontal>
+      <text id="presetRenameStatus" text="" active="false" color="#ff6b6b" align="Center" pref-height="5" />
+      <button id="presetRenameName" name="PresetName" text="Preset 1" on-click="EditPresetName" pref-height="10" pref-width="140" />
+      <horizontal pref-height="10" child-expand-width="false" spacing="2"><button text="Cancel" on-click="CancelPresetName" pref-width="68" pref-height="10" /><primary-button text="Confirm" on-click="SaveOrRenamePreset" pref-width="68" pref-height="10" /></horizontal>
+    </vertical>
+
+    <vertical id="presetDeletePage" active="false" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="2" pad="2" bg="round-rect-panel" bg-color="#00000055">
+      <horizontal pref-height="8" child-expand-width="false" spacing="1"><button text="Back" on-click="CancelDeletePreset" pref-width="18" /><text text="Delete Preset" font-size="5" align="Center" pref-width="125" /></horizontal>
+      <text id="presetDeleteStatus" text="" active="false" color="#ff6b6b" align="Center" pref-height="5" />
+      <text id="presetDeleteConfirmText" name="PresetName" text="" align="Center" pref-height="10" />
+      <horizontal pref-height="10" child-expand-width="false" spacing="2"><button text="Cancel" on-click="CancelDeletePreset" pref-width="68" pref-height="10" /><primary-button text="Delete" on-click="ConfirmDeletePreset" pref-width="68" pref-height="10" /></horizontal>
+    </vertical>
+  </vertical>
+</modal>
+
+<modal-keyboard id="presetNameKeyboard" clear-on-open="false" on-enter="PresetNameEntered" />
+<text id="presetName" name="PresetName" text="" active="false" />
+</vertical>
