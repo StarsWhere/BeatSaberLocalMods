@@ -1,0 +1,14 @@
+{
+  "A model couldn't be fully loaded on this version of Beat Saber.&lt;br&gt;Multi-pass rendering can improve model compatibility at the cost of performance.&lt;br&gt;Would you like to enable multi-pass rendering? You can turn it back off in Settings&#160;&#8594; Mod Settings&#160;&#8594; Asset Bundles.": "此版本的《节奏光剑》无法完整加载模型。&lt;br&gt;多遍渲染可以提高模型兼容性，但会影响性能。&lt;br&gt;是否启用多遍渲染？你可以在设置&#160;&#8594; Mod 设置&#160;&#8594; 资源包中将其关闭。",
+  "Asset Bundles": "资源包",
+  "AssetBundleLoadingTools": "资源包加载工具（AssetBundleLoadingTools）",
+  "Don't ask again": "不再询问",
+  "Enable Multi-Pass Rendering": "启用多遍渲染",
+  "Enable legacy multi pass rendering for better compatibility with older models. Enabling this may have a negative performance impact.": "为提高旧模型的兼容性，启用传统多遍渲染。启用后可能会降低性能。",
+  "No": "否",
+  "No ({0})": "否（{0}）",
+  "Show Unsupported Shaders": "显示不支持的着色器",
+  "This will show objects that use unsupported shaders. These objects are often only visible in one eye when multi-pass rendering is disabled. Mostly useful for debugging.": "显示使用不支持着色器的对象。禁用多遍渲染时，这些对象通常只会在一只眼睛中可见。主要用于调试。",
+  "Yes": "是",
+  "A library with various tools to help safely load AssetBundles and fix legacy shader issues.": "提供多种工具，帮助安全加载资源包并修复旧版着色器问题的库。"
+}

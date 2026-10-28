@@ -1,0 +1,17 @@
+{
+  "Chroma": "Chroma",
+  "Use Custom Environment": "使用自定义环境",
+  "Yay custom environments!!!": "自定义环境真棒！！！",
+  "Custom Environment": "自定义环境",
+  "None": "无",
+  "Disable Environment Enhancements": "禁用环境增强",
+  "Stop custom maps from managing the environment.": "停止让自定义谱面管理环境。",
+  "Disable Note Coloring": "禁用音符着色",
+  "Blame Mawntee.": "这要怪 Mawntee。",
+  "Disable Chroma Events": "禁用 Chroma 事件",
+  "Disable everything Chroma, but you'll break my heart.": "禁用所有 Chroma 功能，但这会让我心碎。",
+  "Force Zen Mode Walls": "强制启用禅模式墙",
+  "Forces walls to be enabled in the Zen Mode modifier.": "强制在禅模式修改器中启用墙。",
+  "Legacy Chroma Detected...": "检测到旧版 Chroma……",
+  "Please do not use Legacy Chroma Lights for new maps as it is deprecated and its functionality in future versions of Chroma cannot be guaranteed": "请不要在新谱面中使用旧版 Chroma 灯光；该功能已弃用，未来版本的 Chroma 可能无法保证其可用性。"
+}

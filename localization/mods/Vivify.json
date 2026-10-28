@@ -1,0 +1,15 @@
+{
+  "Vivify": "Vivify",
+  "Max Camera2 Cameras": "Camera2 最大镜头数",
+  "Will apply post processing to X cameras with the lowest layer. Only affects Camera2 cams.": "将对层级最低的 X 个镜头应用后处理。仅影响 Camera2 镜头。",
+  "To play Vivify maps, the required assets must be downloaded.\nPress Enable to allow Vivify to automatically download necessary assets.": "要游玩 Vivify 谱面，必须先下载所需资源。\n按下“启用”以允许 Vivify 自动下载必要资源。",
+  "enable": "启用",
+  "Downloading map assets...\nPress the back button to cancel.": "正在下载谱面资源……\n按返回键取消。",
+  "0%": "0%",
+  "error": "错误",
+  "This map is missing required assets for your game version.\nPlease contact the mapper to update their map to include the assets.": "此谱面缺少当前游戏版本所需的资源。\n请联系制谱者更新谱面并加入这些资源。",
+  "Network error while fetching bundle.\n": "获取资源包时发生网络错误。\n",
+  "Server sent error response code while fetching bundle.\n": "服务器在获取资源包时返回了错误响应码。\n",
+  "Network error while downloading bundle.\n": "下载资源包时发生网络错误。\n",
+  "Server sent error response code while downloading bundle.\n": "服务器在下载资源包时返回了错误响应码。\n"
+}
