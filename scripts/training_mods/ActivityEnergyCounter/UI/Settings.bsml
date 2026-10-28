@@ -1,0 +1,56 @@
+<bg id="energy-settings-content">
+  <tab-selector tab-tag="energy-tabs" size-delta="0 8" anchored-position="0 -10" />
+  <tab tags="energy-tabs" tab-name="Overview" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container tags="energy-settings-root" size-delta-x="-20" anchored-position-x="4">
+      <text text="Session summary" active="~HasSessionSummary" font-size="3.2" bold="true" align="Left" size-delta-y="8" />
+      <text text="~SessionSummary" active="~HasSessionSummary" font-size="3.2" rich-text="true" align="Left" size-delta-y="8" />
+      <text text="Today summary" active="~HasTodaySummary" font-size="3.2" bold="true" align="Left" size-delta-y="8" />
+      <text text="~TodaySummary" active="~HasTodaySummary" font-size="3.2" rich-text="true" align="Left" size-delta-y="8" />
+      <text text="Latest song" active="~HasLatestSong" font-size="3.2" bold="true" align="Left" size-delta-y="8" />
+      <text text="~LatestSongSummary" active="~HasLatestSong" font-size="3.2" rich-text="true" align="Left" size-delta-y="8" />
+      <button text="Reset workout" pref-height="8" on-click="reset-workout" interactable="~CanStartNewWorkout" />
+      <text text="~Status" active="~HasStatus" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+  <tab tags="energy-tabs" tab-name="General" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container size-delta-x="-20" anchored-position-x="4">
+      <bool-setting text="Enabled" value="Enabled" bind-value="true" apply-on-change="true" />
+      <dropdown-list-setting text="Energy mode" value="Mode" options="Modes" bind-value="true" apply-on-change="true" />
+      <dropdown-list-setting text="Unit" value="Unit" options="Units" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Show labels" value="ShowLabels" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Show estimate" value="ShowEstimate" bind-value="true" apply-on-change="true" />
+      <slider-setting text="Decimal places" value="DecimalPlaces" min="0" max="2" increment="1" formatter="FormatDecimals" bind-value="true" apply-on-change="true" />
+      <text text="~Status" active="~HasStatus" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+  <tab tags="energy-tabs" tab-name="HUD" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container size-delta-x="-20" anchored-position-x="4">
+      <dropdown-list-setting text="Primary HUD scope" value="HudPrimaryScope" options="Scopes" bind-value="true" apply-on-change="true" />
+      <slider-setting text="HUD font scale" value="HudFontScale" min="0.5" max="1.5" increment="0.1" formatter="FormatScale" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Song" value="HudShowSong" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Session" value="HudShowSession" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Today" value="HudShowToday" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Show duration" value="HudShowDuration" bind-value="true" apply-on-change="true" />
+      <text text="~Status" active="~HasStatus" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+  <tab tags="energy-tabs" tab-name="Results" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container size-delta-x="-20" anchored-position-x="4">
+      <slider-setting text="Results font scale" value="ResultsFontScale" min="0.75" max="1.5" increment="0.05" formatter="FormatResultsScale" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Song" value="ResultsShowSong" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Session" value="ResultsShowSession" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Today" value="ResultsShowToday" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Show duration" value="ResultsShowDuration" bind-value="true" apply-on-change="true" />
+      <text text="~Status" active="~HasStatus" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+  <tab tags="energy-tabs" tab-name="Estimate" size-delta-y="-16" anchored-position-y="-8">
+    <settings-container size-delta-x="-20" anchored-position-x="4">
+      <slider-setting text="Body mass" value="BodyMassKg" min="30" max="200" increment="0.5" formatter="FormatMass" bind-value="true" apply-on-change="true" />
+      <slider-setting text="Reference speed" value="ReferenceHandSpeedMps" min="1" max="10" increment="0.1" formatter="FormatSpeed" bind-value="true" apply-on-change="true" />
+      <slider-setting text="Estimate factor" value="CalibrationFactor" min="0.5" max="1.5" increment="0.01" formatter="FormatFactor" bind-value="true" apply-on-change="true" />
+      <bool-setting text="Use head tracking" value="UseHeadTracking" bind-value="true" apply-on-change="true" />
+      <text text="~Status" active="~HasStatus" font-size="3.2" rich-text="false" align="Left" size-delta-y="12" color="#ff8080" />
+    </settings-container>
+  </tab>
+</bg>

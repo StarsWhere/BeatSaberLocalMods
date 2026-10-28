@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <EnableFrameworkPathOverride>true</EnableFrameworkPathOverride>
+    <FrameworkPathOverride>$(GameRoot)/Beat Saber_Data/Managed</FrameworkPathOverride>
+    <AssemblyName>ActivityEnergyCounter.Tests</AssemblyName>
+    <RootNamespace>ActivityEnergyCounter.Tests</RootNamespace>
+    <OutputPath>$(RepoRoot)/.tmp/training-mods/energy/tests/bin/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Deterministic>true</Deterministic>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../ActivityEnergyCounter.csproj" />
+    <Reference Include="$(GameRoot)/Libs/Newtonsoft.Json.dll" Private="true" />
+    <Reference Include="$(GameRoot)/Beat Saber_Data/Managed/nunit.framework.dll">
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "ActivityEnergyCounter",
+  "name": "Activity Energy Counter",
+  "author": "StarsWhere",
+  "version": "0.2.1",
+  "gameVersion": "1.45.2",
+  "description": "Estimated activity energy from headset and controller movement.",
+  "dependsOn": {
+    "BSIPA": "^4.3.7",
+    "BeatSaberMarkupLanguage": "^1.14.1",
+    "SiraUtil": "^3.3.1",
+    "Counters+": "^2.3.12",
+    "LocalModUI": "^0.1.0"
+  },
+  "features": {
+    "CountersPlus.CustomCounter": {
+      "Name": "Activity Energy",
+      "Description": "Estimated activity energy from headset and controller movement.",
+      "MultiplayerReady": false,
+      "CounterLocation": "ActivityEnergyCounter.ActivityEnergyCounter",
+      "ConfigDefaults": {
+        "Enabled": true,
+        "Position": "BelowEnergy",
+        "Distance": 1,
+        "CanvasID": -1
+      },
+      "BSML": {
+        "Resource": "ActivityEnergyCounter.UI.Settings.bsml",
+        "Host": "ActivityEnergyCounter.EnergySettingsHost"
+      }
+    }
+  },
+  "links": {
+    "project-source": "https://github.com/StarsWhere/BeatSaberLocalMods",
+    "project-home": "https://github.com/StarsWhere/BeatSaberLocalMods#readme"
+  }
+}
