@@ -1,0 +1,37 @@
+<bg>
+  <vertical preferred-width="154" preferred-height="74" spacing="2" pad="2" horizontal-fit="Unconstrained" vertical-fit="Unconstrained" child-control-width="true" child-expand-width="false">
+    <horizontal preferred-height="7" spacing="2" child-control-width="true" child-expand-width="false">
+      <text id="summary" text="正在读取曲库" hover-hint="…" font-size="3.2" preferred-width="113" preferred-height="7" rich-text="false" />
+      <button id="scan" text="重新扫描" on-click="scan" pref-width="33" pref-height="7" font-size="3.2" />
+    </horizontal>
+    <text id="status" text="" hover-hint="…" preferred-height="8" font-size="3.2" rich-text="false" overflow-mode="Ellipsis" word-wrapping="true" />
+    <horizontal preferred-height="41" spacing="3" child-control-width="true" child-expand-width="false">
+      <vertical preferred-width="63" preferred-height="41" background="round-rect-panel" bg-color="#142337DD" pad="1" horizontal-fit="Unconstrained">
+        <list id="groups" preferred-width="61" list-width="61" pref-height="37" cell-size="8" visible-cells="4" select-cell="select-group" show-scrollbar="true" stick-scrolling="true" />
+      </vertical>
+      <vertical preferred-width="82" preferred-height="41" background="round-rect-panel" bg-color="#142337DD" pad="2" spacing="1" horizontal-fit="Unconstrained" child-control-width="true" child-expand-width="false">
+        <text id="selected-title" text="" hover-hint="…" rich-text="false" font-size="3.2" preferred-height="5" overflow-mode="Ellipsis" word-wrapping="false" />
+        <text id="detail" text="" hover-hint="…" rich-text="false" font-size="3.2" preferred-width="76" preferred-height="25" align="TopLeft" word-wrapping="true" />
+        <horizontal preferred-height="5" spacing="1" child-control-width="true" child-expand-width="false">
+          <button id="copy-prev" text="上一份" on-click="copy-prev" pref-width="25" pref-height="5" font-size="3.2" />
+          <text id="copy-page" text="" preferred-width="22" preferred-height="5" align="Center" font-size="3.2" />
+          <button id="copy-next" text="下一份" on-click="copy-next" pref-width="25" pref-height="5" font-size="3.2" />
+        </horizontal>
+      </vertical>
+    </horizontal>
+    <horizontal preferred-height="8" spacing="3" child-align="MiddleRight" child-control-width="true" child-expand-width="false">
+      <button id="delete-all" text="清理全部" on-click="delete-all" pref-width="42" pref-height="8" font-size="3.2" />
+      <primary-button id="delete-group" text="清理本组" on-click="delete-group" pref-width="42" pref-height="8" font-size="3.2" />
+    </horizontal>
+    <modal id="confirm" size-delta-x="102" size-delta-y="44" clickerino-offerino-closerino="false">
+      <vertical pad="3" spacing="2" background="round-rect-panel" bg-color="#142337FA" child-control-width="true" child-expand-width="false">
+        <text text="确认清理" align="Center" font-size="4.0" preferred-height="6" />
+        <text id="confirmation" text="" rich-text="false" font-size="3.2" preferred-height="18" word-wrapping="true" align="Center" />
+        <horizontal spacing="3" preferred-height="8" child-align="MiddleCenter" child-control-width="true" child-expand-width="false">
+          <button text="取消" on-click="cancel-confirm" pref-width="42" pref-height="8" font-size="3.2" />
+          <primary-button text="确认删除" on-click="confirm-delete" pref-width="42" pref-height="8" font-size="3.2" />
+        </horizontal>
+      </vertical>
+    </modal>
+  </vertical>
+</bg>

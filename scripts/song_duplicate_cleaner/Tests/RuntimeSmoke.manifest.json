@@ -1,0 +1,9 @@
+{
+  "id": "SongDuplicateCleanerSmoke",
+  "name": "Duplicate Cleaner Runtime Check",
+  "author": "Local",
+  "version": "0.1.0",
+  "gameVersion": "1.45.2",
+  "description": "Temporary UI and fixture-only deletion verification.",
+  "dependsOn": { "BSIPA": "^4.3.7", "SongDuplicateCleaner": "^0.1.0" }
+}
