@@ -1,0 +1,15 @@
+{
+  "id": "UnityShutdownFix",
+  "name": "Unity Shutdown Fix",
+  "author": "StarsWhere",
+  "version": "0.1.0",
+  "gameVersion": "1.45.2",
+  "description": "Guards the verified Unity accessibility cleanup against a destroyed screen manager.",
+  "dependsOn": {
+    "BSIPA": "^4.3.7"
+  },
+  "links": {
+    "project-source": "https://github.com/StarsWhere/BeatSaberLocalMods",
+    "project-home": "https://github.com/StarsWhere/BeatSaberLocalMods#readme"
+  }
+}
