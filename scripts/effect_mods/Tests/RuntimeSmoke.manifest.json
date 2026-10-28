@@ -1,0 +1,1 @@
+{"id":"EffectModsSmoke","name":"Effect mods runtime checks","author":"Local","version":"1.0.0","gameVersion":"1.45.2","description":"Finite native playback checks for source-ported effect mods.","dependsOn":{"BSIPA":"^4.3.0","SongCore":"^3.16.0","CustomJSONData":"^2.7.0","Heck":"^1.8.4","NoodleExtensions":"^1.7.22","Chroma":"^2.9.23"}}
